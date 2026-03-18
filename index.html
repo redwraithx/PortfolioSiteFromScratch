@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <nav id="header-nav">
+        <h1 class="site-name">Brian Purdy</h1>
+        <ul class="navigation-items">
+            <li class="navigation-item"><a href="#home">Home</a></li>
+            <li class="navigation-item"><a href="#about">About</a></li>
+            <li class="navigation-item"><a href="#projects">Projects</a></li>
+            <li class="navigation-item"><a href="#skills">Skills</a></li>
+            <li class="navigation-item"><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about" aria-roledescription="A little information about me.">
+            <div class="about-me">
+                <h2>About Me</h2>
+                <p class="about-me-description">
+                    Welcome to my website.
+                </p>
+                <p> 
+                    &emsp;I'm Brian, a passionate rising fullstack web developer. I have a strong interest in creating dynamic and user-friendly web applications. I enjoy learning new technologies and I'm always eager to take on new challenges.
+                </p>
+                <p>
+                    &emsp;I have experience working with HTML, CSS, and JavaScript. I'm currently working on learning fullstack development, and I'm excited to expand my skill set and build more complex projects and solve real world problems.
+                </p>
+                <p>
+                    &emsp;I am excited to share my journey with you through this portfolio.
+                </p>
+            </div>
+            <img class="about-me-image" src="./assets/portfolio_my_image.jpg" alt="An image of me" />
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><a id="project-link-1">Project 1</a></li>
+                <li><a id="project-link-2">Project 2</a></li>
+                <li><a id="project-link-3">Project 3</a></li>
+            </ul>
+            <div id="project-details-container">
+                <div id="project1">
+                    <h2>Inspirational Quotes Project</h2>
+                    <br>
+                    <p>This project is a web application that provides users with random inspirational quotes. It is built using HTML, CSS, and JavaScript, and it fetches quotes from an external API to display them on the page. Users can click a button to generate a new quote, making it a simple yet effective way to get a dose of motivation whenever needed.</p>
+                    
+                    <span class="projectlink">
+                        <a href="https://redwraithx.github.io/RandomInspirationalQuotes/" target="_blank">View Inspirational Quotes Project</a>
+                    </span>
+                </div>
+                <div id="project2" style='display: none;'>
+                    <p>Project 2 details here<br><br>test<br><br>rfsdf<br><br>sdfsdf</p>
+                </div>
+                <div id="project3" style='display: none;'>
+                    <p>Project 3 details here<br><br>test data project 3<br><br>additional details for project 3</p>
+                </div>
+            </div>           
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li><img src="./assets/skillicons/icons8-html-5-50.png" alt="Skill 1" /></li>
+                <li><img src="./assets/skillicons/icons8-css3-50.png" alt="Skill 2" /></li>
+                <li><img src="./assets/skillicons/icons8-javascript-50.png" alt="Skill 3" /></li>
+                <li><img src="./assets/skillicons/icons8-github-50.png" alt="Skill 4" /></li>
+            </ul>
+            
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Copyright 2024</p>
+    </footer>
+
+    <script src='index.js' defer></script>
+
+</body>
+</html>
