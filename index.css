@@ -20,6 +20,7 @@
     --font-link-hover-color: #0a0a0a;
 
     --border-radius: 12px;
+    --border-radius-softcorner: 8px;
     --border-radius-lowprofile: 4px;
     --border-radius-profile-image: 50%;
     --border-color-profile-image: black;
@@ -28,6 +29,7 @@
     --site-color-header: #3b5998;
     --site-color-headings: #8b9dc3;
     --site-color-text: #f7f7f7;
+    --site-footer-color: #e4e4e4;
     
     --project-select-color: #808080;
     --project-inactive-color: #c0c0c0;
@@ -71,6 +73,9 @@ nav {
     align-items: center;
     padding: var(--spacing-1) 0;
     background-color: var(--site-color-header);
+
+    border-bottom-left-radius: var(--border-radius-softcorner);
+    border-bottom-right-radius: var(--border-radius-softcorner);
 }
 
 .site-name {
@@ -131,6 +136,7 @@ section {
     width: 100%;
     justify-content: space-between;
     margin-top: var(--spacing-1);
+    margin-bottom: 0;
 }
 
 .about-me {
@@ -186,10 +192,20 @@ section {
 }
 
 #project1 h2, #project2 h2, #project3 h2 {
-    text-align: center;
+    /* text-align: center; */
     margin: 0;
     padding: var(--spacing-2);
 
+}
+
+#project1 h3, #project2 h3, #project3 h3 {
+    margin: 0;
+    
+    /* padding: var(--spacing-1) var(--spacing-2); */
+    padding: 0 var(--spacing-2);
+    padding-bottom: var(--spacing-3);
+    color: var(--font-color-about-me);
+    font-weight: normal;
 }
 
 #project-link-1, #project-link-2, #project-link-3 {
@@ -214,6 +230,15 @@ section {
     margin-bottom: 4px;
     height: auto;
     
+}
+
+#project1 span, #project2 span, #project3 span {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+
 }
 
 .projectlink {
@@ -252,11 +277,19 @@ section {
     
 }
 
-
-.skills-list li img:hover {
-    transform: scale(1.2);
+.skills-list li img {
     transition: transform 0.3s ease;
 }
+
+.skills-list li img:hover {
+    animation: growShrink 1s ease-in-out infinite;
+
+    
+
+    
+}
+
+
 
 
 
@@ -265,11 +298,34 @@ section {
     
 }
 
+
+/* contact section */
+#contact {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+    scale: 1.5;
+}
+
+#contact form textarea {
+    width: 100%;
+    height: 100px;
+    
+}
+
 footer {
     justify-content: center;
     display: flex;
     align-items: center;
-
+    background-color: var(--site-footer-color);
+    border-top-left-radius: var(--border-radius-softcorner);
+    border-top-right-radius: var(--border-radius-softcorner);
 }
 
 
+
+@keyframes growShrink {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}

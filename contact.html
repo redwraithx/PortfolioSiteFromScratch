@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src='contact.js' defer></script>
+    <link rel="stylesheet" href="index.css">
+    
 </head>
 <body>
     <nav id="header-nav">
-        <h1>Logo</h1>
+        <h1 class="site-name">Brian Purdy</h1>
         <ul class="navigation-items">
-            <li class="navigation-item"><a href="#home">Home</a></li>
+            <li class="navigation-item"><a href="index.html">Home</a></li>
             <li class="navigation-item"><a href="#about">About</a></li>
             <li class="navigation-item"><a href="#projects">Projects</a></li>
             <li class="navigation-item"><a href="#skills">Skills</a></li>
@@ -19,5 +19,26 @@
         </ul>
     </nav>
 
-    </body>
+    <main>
+        <section id="contact" aria-roledescription="Contact form.">
+            <form action="mailto:brianpurdy01@gmail.com" method="POST" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" style="width: 100%; height: 100px;" required></textarea><br><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Copyright 2024</p>
+    </footer>
+
+    <script src='index.js' defer></script>
+
+</body>
 </html>
