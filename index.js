@@ -1,9 +1,7 @@
-
-
 // Project details display logic
 let updatingProjectDisplay = false;
 
-// const projectscontainer = document.getElementById('projects');
+
 
 const projectLink1 = document.getElementById('project-link-1');
 const project1 = document.getElementById('project1');
@@ -11,12 +9,6 @@ const project1 = document.getElementById('project1');
 const projectLink2 = document.getElementById('project-link-2');
 const project2 = document.getElementById('project2');
 
-const projectLink3 = document.getElementById('project-link-3');
-const project3 = document.getElementById('project3');
-
-// projectscontainer?.addEventListener('mouseleave', (event) => {
-//     displayProject(event, 'hideall', 'none');
-// })
 
 
 // add event listener for each project link, used MouseEnter and MouseLeave events to show/hide project details on hover, instead of click, for better user experience
@@ -25,38 +17,20 @@ projectLink1?.addEventListener('mouseenter', (event) => { {
         displayProject(event, 'project1', 'block');
     }
 }});
-// projectLink1?.addEventListener('mouseleave', (event) => {
-//     if(!updatingProjectDisplay) {
-//         displayProject(event, 'project1', 'none');
-//     }
-// });
+
 
 projectLink2?.addEventListener('mouseenter', (event) => {
     if(!updatingProjectDisplay) {
         displayProject(event, 'project2', 'block');
     }
 });
-// projectLink2?.addEventListener('mouseleave', (event) => {
-//     if(!updatingProjectDisplay) {
-//         displayProject(event, 'project2', 'none');
-//     }
-// });
 
-projectLink3?.addEventListener('mouseenter', (event) => {
-    if(!updatingProjectDisplay) {
-        displayProject(event, 'project3', 'block');
-    }
-});
-// projectLink3?.addEventListener('mouseleave', (event) => {
-//     if(!updatingProjectDisplay) {
-//         displayProject(event, 'project3', 'none');
-//     }
-// });
+
+
 
 // initialize project details display state
 project1.style.display = 'block';
 project2.style.display = 'none';
-project3.style.display = 'none';
 
 projectLink1.style.backgroundColor = 'var(--project-select-color)';
 
@@ -80,7 +54,6 @@ function displayProject(event, linkName, visibility) {
     if(linkName === 'hideall') {
         project1.style.display = 'none';
         project2.style.display = 'none';
-        project3.style.display = 'none';
         
         return;
     }
@@ -95,42 +68,23 @@ function displayProject(event, linkName, visibility) {
     if(linkName === 'project1') {
         project1.style.display = visibility;
         project2.style.display = 'none';
-        project3.style.display = 'none';
 
         projectLink1.style.backgroundColor = 'var(--project-select-color)';
         projectLink2.style.backgroundColor = 'var(--project-inactive-color)';
-        projectLink3.style.backgroundColor = 'var(--project-inactive-color)';
 
         projectLink1.style.color = 'var(--menu-active-color)';
         projectLink2.style.color = 'var(--menu-base-color)';
-        projectLink3.style.color = 'var(--menu-base-color)';
     } 
     else if(linkName === 'project2') {
         project1.style.display = 'none';
         project2.style.display = visibility;
-        project3.style.display = 'none';
 
         projectLink1.style.backgroundColor = 'var(--project-inactive-color)';
         projectLink2.style.backgroundColor = 'var(--project-select-color)';
-        projectLink3.style.backgroundColor = 'var(--project-inactive-color)';
 
         projectLink1.style.color = 'var(--menu-base-color)';
         projectLink2.style.color = 'var(--menu-active-color)';
-        projectLink3.style.color = 'var(--menu-base-color)';
     } 
-    else if(linkName === 'project3') {
-        project1.style.display = 'none';
-        project2.style.display = 'none';
-        project3.style.display = visibility;
-
-        projectLink1.style.backgroundColor = 'var(--project-inactive-color)';
-        projectLink2.style.backgroundColor = 'var(--project-inactive-color)';
-        projectLink3.style.backgroundColor = 'var(--project-select-color)';
-
-        projectLink1.style.color = 'var(--menu-base-color)';
-        projectLink2.style.color = 'var(--menu-base-color)';
-        projectLink3.style.color = 'var(--menu-active-color)';
-    }
     else {
         console.log("Invalid link name: " + linkName);
     }
