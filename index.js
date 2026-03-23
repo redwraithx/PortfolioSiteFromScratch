@@ -29,7 +29,7 @@ projectLink2?.addEventListener('mouseenter', (event) => {
 
 
 // initialize project details display state
-project1.style.display = 'block';
+project1.style.display = 'flex';
 project2.style.display = 'none';
 
 projectLink1.style.backgroundColor = 'var(--project-select-color)';

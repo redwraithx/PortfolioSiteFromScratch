@@ -39,6 +39,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    
 }
 
 body {
@@ -54,8 +55,12 @@ body {
 }
 
 html, body {
-    height: 100%;
+    /* height: 100%; */
 }
+
+
+
+
 
 h2 {
     color: var(--site-color-headings), lightskyblue;
@@ -120,6 +125,7 @@ main {
     flex-direction: column;
     padding-left: var(--spacing-3);
     padding-right: var(--spacing-3);
+    padding-bottom: 100px;
     height: 100%;
 }
 
@@ -174,8 +180,10 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0;
-    padding: 0;
+    align-items: flex-end;
+    height: 250px;
+
+    /* outline: 1px solid blue; */
 }
 
 #project-details-container p {
@@ -185,31 +193,33 @@ section {
 
 #project1, #project2, #project3 {
     display: none;
+    flex-direction: column;
     background-color: lightgray;
     border: 2px solid gray;
-    min-height: 220px;
-
+    height: 100%;
+    
+    /* outline: 1px solid red; */
 }
 
 #project1 h2, #project2 h2, #project3 h2 {
-    /* text-align: center; */
     margin: 0;
     padding: var(--spacing-2);
 
+    /* outline: 4px solid blue; */
 }
 
 #project1 h3, #project2 h3, #project3 h3 {
     margin: 0;
-    
-    /* padding: var(--spacing-1) var(--spacing-2); */
     padding: 0 var(--spacing-2);
     padding-bottom: var(--spacing-3);
     color: var(--font-color-about-me);
     font-weight: normal;
+    height: 50%;
+
+    /* outline: 4px solid green; */
 }
 
 #project-link-1, #project-link-2, #project-link-3 {
-
     background-color: var(--font-link-inactive-color);
     border: 1px solid black;
     margin: 0;
@@ -217,6 +227,8 @@ section {
     border-top-right-radius: var(--border-radius);
     border-top-left-radius: var(--border-radius-lowprofile);
     cursor: pointer;
+
+    /* outline: 4px solid yellow; */
 }
 
 #projects ul, #projects ul, #projects ul {
@@ -230,24 +242,21 @@ section {
     margin-bottom: 4px;
     height: auto;
     
+    /* outline: 4px solid yellow; */
 }
 
 #project1 span, #project2 span, #project3 span {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
-
+    /* align-self: flex-end; */
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+    /* outline: 4px solid orange; */
 }
 
 .projectlink {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    height: 100%;
-    margin-bottom: 0;
-    padding-bottom: 0;
 
 }
 
@@ -314,18 +323,115 @@ section {
 }
 
 footer {
-    justify-content: center;
     display: flex;
+    justify-content: center;
     align-items: center;
     background-color: var(--site-footer-color);
     border-top-left-radius: var(--border-radius-softcorner);
     border-top-right-radius: var(--border-radius-softcorner);
+
+    
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
-
-
 
 @keyframes growShrink {
   0% { transform: scale(1); }
   50% { transform: scale(1.15); }
   100% { transform: scale(1); }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    html {
+        
+    }
+
+    body {
+    /* display: flex;
+    flex-direction: column;
+    background-color: #F0F2F5;
+    font-family: Arial, sans-serif;
+    font-size: var(--spacing-3);
+    font-weight: medium; 
+    margin: 0 auto; */
+
+    /* width: 100%; */
+    
+    
+    }
+
+    html, body {
+    /* height: 100%; */
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 425px) {
+    body {
+        width: 100%;
+    }
+
+    main {
+        
+    }
+
+    .site-name {
+        display: none;
+    }
+
+    .about-me {
+        max-width: 100%;
+    }
+
+    .about-me-image {
+        display: none;
+
+    }
+
+    #project-link-1, #project-link-2 {
+        flex-direction: row;
+        font-size: 12px;
+        padding: var(--spacing-0) var(--spacing-1);
+    }
+
+    #project-details-container {
+        height: auto;
+    }
+
+
+
+    #project1 span, #prject2 span {
+        padding-bottom: var(--spacing-2);
+    }
+
+
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+    
+    .navigation-items {
+        font-size: medium;
+    }
+
+    #project-link-1, #project-link-2 {
+        /* min-width: 80px; */
+        /* max-width: 100px; */
+        font-size: 10px;
+        
+    }
 }
